@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed - Twitter Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Twitter Clone</h1>
+        <div>
+            <span id="welcome-user"></span>
+            <button id="logout-button">Logout</button>
+        </div>
+    </header>
+
+    <div class="container main-container">
+        <div class="tweet-form-container">
+            <h2>O que está acontecendo?</h2>
+            <form id="tweet-form">
+                <textarea id="tweet-content" placeholder="Digite seu tweet (máx 280 caracteres)" maxlength="280" required></textarea>
+                <div class="tweet-form-footer">
+                     <span id="char-count">0/280</span>
+                    <button type="submit">Tweetar</button>
+                </div>
+                 <p id="tweet-message" class="message"></p>
+            </form>
+        </div>
+
+        <div class="feed-container">
+            <h2>Seu Feed</h2>
+            <div id="feed">
+                <!-- Tweets serão carregados aqui -->
+                <p>Carregando tweets...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

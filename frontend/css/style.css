@@ -1,0 +1,271 @@
+/* frontend/css/style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f5f8fa;
+    color: #14171a;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 600px; /* Largura base para mobile/desktop pequeno */
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para Login/Registro */
+.auth-container {
+    text-align: center;
+}
+
+.form-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+}
+
+.form-container h2 {
+    margin-top: 0;
+    color: #1da1f2; /* Azul Twitter */
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: calc(100% - 22px); /* Considera padding e borda */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccd6dd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Botões arredondados */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0c85d0;
+}
+
+.message {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+.message.success {
+    color: green;
+}
+.message.error {
+    color: red;
+}
+
+/* Estilos do Header (Feed) */
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e1e8ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Fixa o header no topo */
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    color: #1da1f2;
+    font-size: 1.5rem;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+#welcome-user {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+#logout-button {
+    background-color: #e0245e; /* Vermelho para logout */
+    padding: 8px 15px;
+}
+#logout-button:hover {
+     background-color: #b81e4f;
+}
+
+
+/* Estilos do Formulário de Tweet */
+.tweet-form-container {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #e1e8ed;
+}
+.tweet-form-container h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+.tweet-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+#char-count {
+    font-size: 0.9em;
+    color: #657786;
+}
+
+
+/* Estilos do Feed e Tweets */
+.feed-container h2 {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e8ed;
+    margin-bottom: 10px;
+}
+
+.tweet {
+    border-bottom: 1px solid #e1e8ed;
+    padding: 15px 0;
+}
+.tweet:last-child {
+    border-bottom: none;
+}
+
+.tweet-header {
+    display: flex;
+    justify-content: space-between; /* Para alinhar botão de seguir */
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.tweet-user {
+    font-weight: bold;
+    color: #14171a;
+}
+.tweet-user:hover {
+    text-decoration: underline; /* Indica clicável (embora não implementado) */
+}
+
+.tweet-time {
+    font-size: 0.85em;
+    color: #657786;
+}
+
+.tweet-content {
+    margin-bottom: 10px;
+    white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+    word-wrap: break-word; /* Quebra palavras longas */
+}
+
+.tweet-actions {
+    display: flex;
+    gap: 20px; /* Espaçamento entre botões */
+    align-items: center;
+}
+
+.tweet-actions button {
+    background: none;
+    border: none;
+    color: #657786;
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.tweet-actions button:hover {
+    color: #1da1f2; /* Muda cor no hover */
+}
+.tweet-actions button.liked {
+    color: #e0245e; /* Cor quando curtido */
+    font-weight: bold;
+}
+.tweet-actions button.liked:hover {
+     color: #b81e4f;
+}
+
+.tweet-actions .like-count {
+    font-size: 0.9em;
+    color: #657786;
+    margin-left: -15px; /* Aproxima a contagem do botão */
+}
+
+.follow-button { /* Estilo específico para o botão seguir */
+    padding: 5px 10px;
+    font-size: 0.8em;
+    background-color: #fff;
+    color: #1da1f2;
+    border: 1px solid #1da1f2;
+    border-radius: 15px;
+}
+.follow-button:hover {
+    background-color: #eaf5fd;
+}
+
+
+/* --- Responsividade --- */
+
+/* Estilos para Telas Maiores (Desktop - 1920x1080) */
+@media (min-width: 1000px) { /* Ajuste o breakpoint se necessário */
+    .container {
+        max-width: 800px; /* Aumenta a largura máxima em telas grandes */
+    }
+
+    /* Poderia adicionar layout de 3 colunas aqui, mas manteremos simples */
+    .main-container {
+        /* Exemplo: poderia ter uma barra lateral */
+    }
+}
+
+/* Estilos para Telas Menores (Mobile - 430x932) */
+/* Os estilos base já são mobile-first (max-width: 600px),
+   então poucos ajustes são necessários aqui para este exemplo simples. */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Reduzir um pouco a fonte base */
+    }
+    .container {
+        margin: 10px; /* Menor margem nas laterais */
+        padding: 10px;
+    }
+    header {
+        padding: 8px 10px;
+    }
+     header h1 {
+        font-size: 1.3rem;
+    }
+    button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    input[type="text"],
+    input[type="password"],
+    textarea {
+        font-size: 0.9rem;
+    }
+     .tweet-actions {
+        gap: 15px; /* Menor espaço entre ações */
+    }
+}
