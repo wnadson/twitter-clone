@@ -2,7 +2,7 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: #f5f8fa;
+    background-color: #2a2b2b;
     color: #14171a;
     line-height: 1.5;
 }
@@ -11,7 +11,7 @@ body {
     max-width: 600px; /* Largura base para mobile/desktop pequeno */
     margin: 20px auto;
     padding: 15px;
-    background-color: #ffffff;
+    background-color: #323030;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -78,7 +78,7 @@ button:hover {
 
 /* Estilos do Header (Feed) */
 header {
-    background-color: #ffffff;
+    background-color: #1c1c1c;
     padding: 10px 20px;
     border-bottom: 1px solid #e1e8ed;
     display: flex;
